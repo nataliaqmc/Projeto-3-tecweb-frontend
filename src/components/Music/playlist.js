@@ -7,10 +7,9 @@ export default function MusicPlaylist(props) {
 }
   function deleteFromPlaylist () {
     var axios = require("axios").default;
-    
     const deletar = (event) => {
       event.preventDefault();
-      axios.delete('Access-Control-Allow-Origin:*','https://projeto-3-tecweb.herokuapp.com/playlist/delete/'+props.song+"/"+props.artist+"/", {'song':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url},"Access-Control-Allow-Origin: *")
+      axios.delete('https://projeto-3-tecweb.herokuapp.com/playlist/delete/'+props.song+"/"+props.artist+"/", {'song':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url},"Access-Control-Allow-Origin: *")
     }
     return deletar
   }

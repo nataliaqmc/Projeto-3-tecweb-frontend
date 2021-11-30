@@ -7,7 +7,7 @@ function PaginaPlaylist() {
   const [playlist, setPlaylist] = useState([]);
   useEffect(() => {
     axios
-      .get("Access-Control-Allow-Origin:*",'https://projeto-3-tecweb.herokuapp.com/playlist/')
+      .get('https://projeto-3-tecweb.herokuapp.com/playlist/')
       .then((res) => setPlaylist(res.data));
   }, []);
   console.log(playlist);
