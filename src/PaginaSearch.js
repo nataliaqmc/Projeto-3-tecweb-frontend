@@ -47,7 +47,7 @@ function PaginaSearch() {
               className="form-card-title"
               type="text"
               name="titulo"
-              placeholder="Type artist's name..."
+              placeholder="Type artist's name or song title..."
               value={artist}
               onChange={artistChanged}
             />
