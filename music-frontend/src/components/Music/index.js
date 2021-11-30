@@ -10,7 +10,7 @@ export default function Music(props) {
     const x = props.header_image_thumbnail_url.substring(26)
     const favoritar = (event) => {
       event.preventDefault();
-      axios.post('http://localhost:8000/playlist/'+props.title+'/'+props.artist_names+'/'+x+'/', {'title':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url})
+      axios.post('http://projeto3-tecweb-front.herokuapp.com/playlist/'+props.title+'/'+props.artist_names+'/'+x+'/', {'title':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url})
     }
     return favoritar
   }
