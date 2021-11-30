@@ -7,7 +7,7 @@ function PaginaPlaylist() {
   const [playlist, setPlaylist] = useState([]);
   useEffect(() => {
     axios
-      .get('http://projeto3-tecweb-front.herokuapp.com/playlist/')
+      .get('http://projeto-3-tecweb.herokuapp.com/playlist/')
       .then((res) => setPlaylist(res.data));
   }, []);
   console.log(playlist);
