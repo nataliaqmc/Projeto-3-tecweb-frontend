@@ -9,7 +9,7 @@ export default function MusicPlaylist(props) {
     var axios = require("axios").default;
     const deletar = (event) => {
       event.preventDefault();
-      axios.delete('http://projeto3-tecweb-front.herokuapp.com/playlist/delete/'+props.song+"/"+props.artist+"/", {'song':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url})
+      axios.delete('http://projeto-3-tecweb.herokuapp.com/playlist/delete/'+props.song+"/"+props.artist+"/", {'song':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url})
     }
     return deletar
   }
