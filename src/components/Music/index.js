@@ -7,10 +7,11 @@ import "./index.css";
 export default function Music(props) {
   function addToPlaylist () {
     var axios = require("axios").default;
+    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     const x = props.header_image_thumbnail_url.substring(26)
     const favoritar = (event) => {
       event.preventDefault();
-      axios.post('https://projeto-3-tecweb.herokuapp.com/playlist/'+props.title+'/'+props.artist_names+'/'+x+'/', {'title':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url, headers: {"Access-Control-Allow-Origin": "*"}})
+      axios.post('https://projeto-3-tecweb.herokuapp.com/playlist/'+props.title+'/'+props.artist_names+'/'+x+'/', {'title':props.title, 'artist':props.artist_names, 'thumbnail':props.header_image_thumbnail_url})
     }
     return favoritar
   }
