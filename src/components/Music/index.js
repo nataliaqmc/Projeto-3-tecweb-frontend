@@ -7,7 +7,6 @@ import "./index.css";
 export default function Music(props) {
   function addToPlaylist () {
     var axios = require("axios").default;
-    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     const x = props.header_image_thumbnail_url.substring(26)
     const favoritar = (event) => {
       event.preventDefault();
